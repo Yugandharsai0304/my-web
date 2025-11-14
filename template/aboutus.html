@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <title>Noto Healthy Desserts</title>
+  <link rel="stylesheet" href="../static/aboutus.css">
+</head>
+<body>
+    <div id="heading">
+      <img src="https://eatnoto.com/cdn/shop/files/Website_logo_180x.png?v=1709207376" alt="" id="one">
+    </div>
+    <!-- navbar -->
+    <nav id="navbar">
+      <a href="{% url 'page:home' %}" class="tags">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Ice Cream Library<span class="arrow">&#9662;</span></button>
+        <div class="dropdown-content">
+            <a href="{% url 'page:waffle' %}">Waffle Icecream Sandwich</a>
+            <a href="{% url 'page:creambars' %}">Ice Cream Bars</a>
+            <!-- <a href="{% url 'page:minibites' %}">Mini Bites</a> -->
+            <!-- <a href="{% url 'page:lowcal' %}">Low Cal Ice Creams</a> -->
+        </div>
+      </div>
+      <a href="{% url 'page:cakes' %}" class="tags">Cheesecakes</a>
+      <a href="{% url 'page:aboutus' %}" class="tags">About Us</a>
+  </nav>
+  
+  <div class="banner">
+    <h1>SPREADING HAPPINESS THROUGH HEALTHY DESSERTS</h1>
+    <p>
+      Say hello to NOTO: that brings healthy, low-calorie ice creams and mithais with zero added sugar to the millennial Indian with an incurable sweet tooth.
+      It's good-for-you dessert that you can binge on, guilt-free, and not just on cheat days.
+    </p>
+    <p>
+      NOTO was born to revolutionize the way people consume sweets. It's a common myth that if it's easy on the calories,
+      it's not going to satiate those taste buds - we aim to disrupt this misconception ONE DESSERT AT A TIME!
+    </p>
+  </div>
+  
+  <!-- Content Section -->
+  <div class="content">
+    <div class="image-section">
+      <img src="https://eatnoto.com/cdn/shop/files/13082020_Noto-19156_5d9c30a3-8454-493f-b728-b1cfb67d602e.jpg?v=1663752323" alt="Noto Ice Cream">
+    </div>
+    <div class="text-section">
+      <h2>LOW CALORIE, HIGH PROTEIN</h2>
+      <p>
+        With each 125 ml tub including only 75-95 calories, 3 grams of fat, 75% less sugar, and higher protein compared to
+        regular ice creams, this sweet really is every kind of treat!
+      </p>
+    </div>
+  </div>
+  <div class="content">
+    
+    <div class="text-section">
+      <h2>VEGAN FROZEN DESSERT</h2>
+      <p>
+        This line has all of our signature deliciousness but without DAIRY!
+
+        Dairy free, ZERO Added Sugar, and made using Almond Protein, our newest range has five delightful flavours - Dark Chocolate, Mocha Almond, Pistachio, Salted Caramel and the unique Mango & Raspberry.
+
+        The perfect guilt free dessert for everyone following (or not) a vegan lifestyle.
+      </p>
+    </div>
+    <div class="image-section">
+      <img src="https://eatnoto.com/cdn/shop/files/DSC06625.jpg?v=1663753168" alt="Noto Ice Cream">
+    </div>
+  </div>
+  <script src="../static/aboutus.js"></script>
+</body>
+</html>

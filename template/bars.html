@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/bars.css">
+</head>
+<body>
+    <div id="heading">
+        <img src="https://eatnoto.com/cdn/shop/files/Website_logo_180x.png?v=1709207376" alt="" id="one">
+    </div>
+    <!-- navbar -->
+        <nav id="navbar">
+            <a href="{% url 'page:home' %}" class="tags">Home</a>
+            <select name="" id="list_items">
+                <option>Ice Cream Library</option>
+                <optgroup label="List Items">
+                    <a href="">
+                        <option>Icecream Bars</option>
+                    </a>
+                    <a href="">
+                        <option>Popsicles</option>
+                    </a>
+                    <a href="">
+                        <option>Mini Bites</option>
+                    </a>
+                    <a href="">
+                        <option>Ice Creams</option>
+                    </a>
+                </optgroup>
+            </select>
+            <a href="" class="tags">Cheesecakes</a>
+            <a href="" class="tags">About Us</a>
+        </nav>
+        <div id="side_heading">
+            <h2 >ice cream bars</h2>
+        </div>
+        <div id="main">
+            <div class="sub">
+                <div class="summer_div">
+                    <a href="">
+                        <img src="https://eatnoto.com/cdn/shop/files/BrownieBarFront_533x.jpg?v=1714484272" alt="" class="sum">
+                    </a>
+                    <h3>
+                        <a href="" class="hazelunt">HAZELNUT CRUNCH BAR [80ML]</a>
+                    </h3><br>
+                    <span class="price_summer">₹ 120.00</span><br>
+                    <a href="https://www.swiggy.com" class="del">
+                        <button class="or_swiggy">order on swiggy</button>
+                    </a>
+                    <a href="https://www.zomato.com" class="del">
+                        <button class="or_zomoto">order on zomoto</button>
+                    </a>
+                </div>
+            </div>
+            <div class="sub">
+                <div class="summer_div">
+                    <a href="">
+                        <img src="https://eatnoto.com/cdn/shop/files/RoastedHazelnutFront_533x.jpg?v=1714484312" alt="" class="sum">
+                    </a>
+                    <h3>
+                        <a href="" class="hazelunt">STRAWBERRY RASPBERRY POP</a>
+                    </h3><br>
+                    <span class="price_summer">₹ 120.00</span><br>
+                    <a href="https://www.swiggy.com" class="del">
+                        <button class="or_swiggy" >order on swiggy</button>
+                    </a>
+                    <a href="https://www.zomato.com" class="del">
+                        <button class="or_zomoto" >order on zomoto</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+         <div id="main_footer">
+            <footer>
+                <div id="outer_div">
+                    <div id="inner_div1" class="inner">
+                        <a href="" id="noto_anchor">
+                            <img src="https://eatnoto.com/cdn/shop/files/Footer-logo_200x@2x.png?v=1640696212" alt="" id="noto_img">
+                        </a>
+                        <p id="noto_para">
+                            Let's be honest - who doesn't want to tuck <br> into sweets and ice creams everyday? All <br> too often we feel like if we've had a bite of <br> the dessert we might as well have it all - <br> because why not?!?
+                        </p>
+                    </div>
+                    <div id="inner_div2" class="inner">
+                        <h2 id="quick_heading">quick links:</h2>
+                        <ul>
+                            <li class="list_footer"><a href="" class="list_anchor">Ice Cream Bars</a></li>
+                            <li class="list_footer"><a href="" class="list_anchor">Fruit Popsicles</a></li>
+                            <li class="list_footer"><a href="" class="list_anchor">Low Calorie Ice <br> Cream</a></li>
+                            <li class="list_footer"><a href="" class="list_anchor">Mini Bites Ice <br> Cream</a></li>
+                            <li class="list_footer"><a href="" class="list_anchor">Ice Cream Cake</a></li>
+                            <li class="list_footer"><a href="" class="list_anchor">Greese Yogurt <br> Cheesecake</a></li>
+                            <li class="list_footer"><a href="" class="list_anchor">Vegan Mini <br> Bites</a></li>
+                            <li class="list_footer"><a href="" class="list_anchor1">Vegan Frozen <br> Desserts</a></li>
+                            <li class="list_footer"><a href="" class="list_anchor1">Syrups</a></li>
+                            <li class="list_footer"><a href="" class="list_anchor1">About Us</a></li>
+                        </ul>
+                        <ul id="icon">
+                            <li id="facebook">
+                                <a href="https://www.facebook.com">
+                                    <button id="face_button">
+                                        <img src="../static/facebook.png" alt="" id="icons_img1">
+                                    </button>
+                                </a>
+                            </li>
+                            <li id="instagram" >
+                                <a href="https://www.instagram.com">
+                                    <img src="../static/insta.png" alt="" id="icons_img2">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="inner_div3" class="inner">
+                        <h2 id="news_heading">newsletter signup:</h2>
+                        <form action="">
+                            <div id="input_div">
+                                <div id="email_div">
+                                    <input type="email" placeholder="Enter your Email Address" required id="input">
+                                    <button type="submit" id="submit">Go</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="contact">
+                            <p class="order">
+                                For any order related queries email us on order@eatnoto.com
+                            </p>
+                            <br>
+                            <p class="order">
+                                For any job related queries email us on jobs@eatnoto.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+</body>
+</html>

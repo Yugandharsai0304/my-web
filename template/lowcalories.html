@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POPSICLES - LOW CALORIE, ZERO ADDED SUGAR</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <header>
+    <h1>POPSICLES - LOW CALORIE, ZERO ADDED SUGAR</h1>
+    <div class="filters">
+        <div class="filter-container">
+            <div class="filter-dropdown">
+              <button class="dropdown-toggle" id="availabilityToggle">Availability ▼</button>
+              <div class="dropdown-menu" id="availabilityMenu">
+                <div class="dropdown-header">
+                  <span>0 selected</span>
+                  <button class="reset-button">Reset</button>
+                </div>
+                <div class="dropdown-options">
+                  <label>
+                    <input type="checkbox" class="filter-option" data-option="in-stock">
+                    In stock (5)
+                  </label>
+                  <label>
+                    <input type="checkbox" class="filter-option" data-option="out-of-stock" disabled>
+                    Out of stock (0)
+                  </label>
+                </div>
+              </div>
+            </div>
+        
+            <div class="filter-dropdown">
+              <button class="dropdown-toggle" id="priceToggle">Price ▼</button>
+              <div class="dropdown-menu" id="priceMenu">
+                <div class="dropdown-header">
+                  <span>The highest price is ₹ 200.00</span>
+                  <button class="reset-button" onclick="resetPriceRange()">Reset</button>
+                </div>
+                <div class="price-range">
+                  <div class="input-wrapper">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="priceFrom" placeholder="From" min="0">
+                  </div>
+                  <div class="input-wrapper">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="priceTo" placeholder="To" min="0">
+                  </div>
+                </div>
+            </div>
+             
+              <!-- Add content for the Price filter here -->
+            </div>
+          </div>
+          
+          <div class="sort-container">
+              <label for="sort">Sort by:</label>
+              <select id="sort">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="newest">Newest Arrivals</option>
+              </select>
+              <div class="product-count">
+                6 Products
+              </div>
+            </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="product-grid">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/Fast_up-Front_750x.png?v=1713723150" alt="Assorted Flavour">
+          <span class="badge">New</span>
+        </div>
+        <h5>Cranberry Orange Popsicle with Electrolytes</h5>
+        <p class="price">₹ 50.00</p>
+        <div class="rating">★★★★★ 1</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div>
+      <!-- Repeat Product Cards -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/StrawberryFront._1_750x.jpg?v=1709117706" alt="Rich Chocolate">
+          <span class="badge">Bestseller</span>
+        </div>
+        <h5>STRAWBERRY RASPBERRY POP81</h5>
+        <p class="price">₹ 100.00</p>
+        <div class="rating">★★★★★ 1</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/OrangeFront1._750x.jpg?v=1709044908" alt="Rich Chocolate">
+          
+        </div>
+        <h5>ORANGE POP</h5>
+        <p class="price">₹ 120.00</p>
+        <div class="rating">★★★★ 1</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/KalaJamun_Front._750x.png?v=1709037385" alt="Rich Chocolate">
+          <span class="badge">Bestseller</span>
+        </div>
+        <h5>KALA JAMUN POP</h5>
+        <p class="price">₹ 100.00</p>
+        <div class="rating">★★★★★ 1</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div>
+      <!-- Add more cards as needed -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/KalaJamun_Front._750x.png?v=1709037385" alt="Rich Chocolate">
+        
+        </div>
+        <h5>MANGO COCONUT POP</h5>
+        <p class="price">₹ 60.00</p>
+        <div class="rating">★★★★★ 1</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/Pinacoladafront_750x.jpg?v=1709045101" alt="Rich Chocolate">
+        
+        </div>
+        <h5>PIÑA COLADA POP</h5>
+        <p class="price">₹ 60.00</p>
+        <div class="rating">★★★ 1</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="project.js"></script>
+</body>
+</html>

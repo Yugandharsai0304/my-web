@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MINI BITES - UP TO 30 CALORIES</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <header>
+    <h1>MINI BITES - UP TO 30 CALORIES</h1>
+    <div class="filters">
+        <div class="filter-container">
+            <div class="filter-dropdown">
+              <button class="dropdown-toggle" id="availabilityToggle">Availability ▼</button>
+              <div class="dropdown-menu" id="availabilityMenu">
+                <div class="dropdown-header">
+                  <span>0 selected</span>
+                  <button class="reset-button">Reset</button>
+                </div>
+                <div class="dropdown-options">
+                  <label>
+                    <input type="checkbox" class="filter-option" data-option="in-stock">
+                    In stock (5)
+                  </label>
+                  <label>
+                    <input type="checkbox" class="filter-option" data-option="out-of-stock" disabled>
+                    Out of stock (0)
+                  </label>
+                </div>
+              </div>
+            </div>
+        
+            <div class="filter-dropdown">
+              <button class="dropdown-toggle" id="priceToggle">Price ▼</button>
+              <div class="dropdown-menu" id="priceMenu">
+                <div class="dropdown-header">
+                  <span>The highest price is ₹ 300.00</span>
+                  <button class="reset-button" onclick="resetPriceRange()">Reset</button>
+                </div>
+                <div class="price-range">
+                  <div class="input-wrapper">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="priceFrom" placeholder="From" min="0">
+                  </div>
+                  <div class="input-wrapper">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="priceTo" placeholder="To" min="0">
+                  </div>
+                </div>
+            </div>
+             
+              <!-- Add content for the Price filter here -->
+            </div>
+          </div>
+          
+          <div class="sort-container">
+              <label for="sort">Sort by:</label>
+              <select id="sort">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="newest">Newest Arrivals</option>
+              </select>
+              <div class="product-count">
+                5 Products
+              </div>
+            </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="product-grid">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/Vanillamini_Front._750x.png?v=1709117818" alt="Assorted Flavour">
+          <span class="badge">Bestseller</span>
+        </div>
+        <h5>Classic Vanilla Minis [10 pieces]</h5>
+        <p class="price">₹ 335.00</p>
+        <div class="rating">★★★★★ 35</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div>
+      <!-- Repeat Product Cards -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/DarkChocolateMiniFront_1_750x.jpg?v=1709034876" alt="Rich Chocolate">
+          <span class="badge">New</span>
+        </div>
+        <h5>DARK CHOCOLATE MINIS [10 pieces]</h5>
+        <p class="price">₹ 300.00</p>
+        <div class="rating">★★★★ 40</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/CrunchyCaramelTacoFront_750x.jpg?v=1714482093" alt="Rich Chocolate">
+          <span class="badge">New</span>
+        </div>
+        <h5>Crunchy Caramel - Choco Taco [4 pieces]</h5>
+        <p class="price">₹ 300.00</p>
+        <div class="rating">★★★★ 1</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/Strawberry-Mini-Front_750x.jpg?v=1734523920" alt="Rich Chocolate">
+          
+        </div>
+        <h5>Strawberry-minis-ice-cream-09-pieces</h5>
+        <p class="price">₹ 200.00</p>
+        <div class="rating">★★★★ 30</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/Veganminifront_750x.jpg?v=1709123868" alt="Rich Chocolate">
+        
+        </div>
+        <h5>Vegan Dark Chocolate Minis Ice Cream [10 pieces]</h5>
+        <p class="price">₹ 250.00</p>
+        <div class="rating">★★★ 25</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="project.js"></script>
+</body>
+</html>
