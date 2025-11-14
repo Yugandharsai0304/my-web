@@ -1,0 +1,652 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* heading */
+#heading{
+  width: 100%;
+  height: 70px;
+  /* border-bottom: 1px solid black; */
+}
+#one{
+  position: relative;
+  left: 90vh;
+}
+/* navbar */
+#navbar{
+  width: 100%;
+  height: 50px;
+  color: black;
+}
+.tags{
+  text-decoration: none;
+  color:black;
+  position: relative;
+  left: 450px;
+  top: 15px;
+  font-size: 15px;
+  font-family: Helvetica;
+  font-weight:bold;
+  margin-right: 70px;
+}
+.tags:hover{
+  color: #ad84bb;
+}
+.dropdown {
+  position: relative;
+  left: 425px;
+  top: 15px;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: black;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-family: Helvetica;
+  font-weight:bold;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+.dropbtn:hover {
+  background-color: #ad84bb;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu when hovering over the button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+header {
+  text-align: start;
+  padding: 20px;
+}
+/* General Styles for Filter Container */
+.filter-container {
+position: relative;
+display: inline-block;
+}
+/* Dropdown Button Styling */
+.dropdown-toggle {
+padding: 8px 16px;
+cursor: pointer;
+background-color: #007BFF;
+color: white;
+border: none;
+border-radius: 4px;
+font-size: 14px;
+}
+
+/* Dropdown Menu Hidden by Default */
+.dropdown-menu {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: white;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 10px;
+border-radius: 4px;
+width: 200px;
+z-index: 1;
+}
+
+/* Show dropdown when active */
+.filter-dropdown.open .dropdown-menu {
+display: block;
+}
+
+/* Price Range Styling */
+.price-range {
+display: flex;
+justify-content: space-between;
+}
+
+.input-wrapper {
+display: flex;
+align-items: center;
+}
+
+.currency-symbol {
+margin-right: 5px;
+}
+
+/* Styling for input boxes */
+input[type="number"] {
+width: 80px;
+padding: 5px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 4px;
+text-align: right;
+}
+
+.reset-button {
+background-color: transparent;
+border: none;
+color: #007BFF;
+cursor: pointer;
+font-size: 12px;
+padding: 0;
+margin-left: 10px;
+}
+
+
+header h1
+{
+  margin-left:20px;
+}
+
+.filters {
+  margin: 10px 0;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters .dropdown {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  position: relative;
+  margin-bottom: 0px;
+}
+
+.product-image img {
+  width: 250px;
+  height: 191px;
+  border-radius: 10px;
+}
+
+.product-image .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff5733;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom:0;
+  margin-top:0;
+}
+
+.rating {
+  color: #ff9900;
+  margin-bottom: 5px;
+}
+
+.actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.actions .swiggy {
+  background-color: #ff9600;
+  color: white;
+  font-size: 12px;
+}
+
+.actions .zomato {
+  background-color: #e91c23;
+  color: white;
+  font-size: 12px;
+}
+.actions{
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-container {
+  display: flex;
+  gap: 20px;
+  align-items:center;
+  padding: 5px;
+}
+
+
+.filter-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  color:black;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  display: none;
+  z-index: 10;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.reset-button {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.dropdown-options {
+  padding: 10px;
+}
+
+.dropdown-options label {
+  display: flex;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.dropdown-options input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.dropdown-options input[type="checkbox"]:disabled + span {
+  color: #ccc;
+}
+
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.sort-container {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+ justify-content: end;
+ gap:10px;
+}
+
+.sort-container label {
+  font-weight: bold;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+
+.sort-container select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.product-count {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #555;
+
+}
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.price-filter {
+  max-width: 400px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.price-filter h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.price-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.price-info .reset-button {
+  color: #007BFF;
+  cursor: pointer;
+  text-decoration: underline;
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+}
+
+#priceMenu
+{
+  padding:10px;
+}
+
+.price-range {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.price-range .input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.price-range input {
+  width: 80px;
+  padding: 8px 8px 8px 30px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.price-range input::placeholder {
+  color: #aaa;
+}
+
+#availability,#sort
+{
+  padding:10px;
+}
+
+.price-range .currency-symbol {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 14px;
+  }
+
+#side_heading{
+  width: fit-content;
+  font-size: 2.7vh;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  left: 5vh;
+}
+/* footer */
+#main_footer{
+  width: 100%;
+  height: 456px;
+  background-color: #4d52a4;
+  margin-top: 50px;
+}
+#outer_div{
+  width: 85%;
+  height: 85%;
+  position: relative;
+  top: 5vh;
+  left: 15vh;
+}
+.inner{
+  width: 33%;
+  height: 100%;
+  float: left;
+}
+#noto_img{
+  width: 27vh;
+  height: 7.5vh;
+  position: relative;
+  left: 6vh;
+  top: 0.5vh;
+}
+#noto_para{
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 20px;
+  color: white;
+  margin-bottom: 0px;
+  letter-spacing: 0.06rem;
+  position: relative;
+  left: 6vh;
+  top: 4vh;
+}
+#quick_heading{
+  color: white;
+  font-size: 2.5vh;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  left: 8vh;
+  top: 0.7vh;
+}
+.list_anchor{
+  display: list-item;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.06rem;
+  position: relative;
+  top: 4vh;
+  left: 8vh;
+  width: fit-content;
+  margin-top: 1vh;
+}
+.list_anchor1{
+  display: list-item;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.06rem;
+  position: relative;
+  left: 32vh;
+  top: -32.8vh;
+  width: fit-content;
+  margin-top: 1vh;
+}
+.list_anchor:hover,.list_anchor1:hover{
+  text-decoration: underline;
+  color: white;
+}
+.list_footer{
+  list-style-type: none;
+}
+#icon{
+  list-style-type: none;
+  position: relative;
+  top: -6vh;
+  left: 8vh;
+  display: flex;
+}
+#icons_img1{
+  width: 20px;
+  height: 18px;
+  margin-right: 1vh;
+}
+#icons_img2{
+  width: 20px;
+  height: 20px;
+  margin-right: 2vh;
+}
+#face_button{
+  width: 20px;
+  height: 18px;
+  margin-right: 2vh;
+}
+#news_heading{
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 2px;
+  position: relative;
+  left: 10.2vh;
+  top: 0.7vh;
+}
+#input_div{
+  border: 1px solid black;
+  width: 45.6vh;
+  height: 5.5vh;
+  position: relative;
+  top: 5.3vh;
+  left: 10.2vh;
+  background-color: white;
+}
+#email_div{
+  width: 88%;
+  height: 100%;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+}
+#submit{
+  width: 12%;
+  height: 100%;
+  background-color: #EB558F;
+  position: absolute;
+  left: 40.1vh;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 3vh;
+}
+#input{
+  width: 80%;
+  height: 100%;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  border: none;
+  outline: none;
+  position: absolute;
+  left: 3.6vh;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: default;
+}
+.order{
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: 12vh;
+  left: 10.2vh;
+  line-height: 24px;
+}

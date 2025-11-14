@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/cakes.css">
+</head>
+<body>
+    <div id="heading">
+        <img src="https://eatnoto.com/cdn/shop/files/Website_logo_180x.png?v=1709207376" alt="" id="one">
+    </div>
+    <!-- navbar -->
+        <nav id="navbar">
+            <a href="{% url 'page:home' %}" class="tags">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Ice Cream Library<span class="arrow">&#9662;</span></button>
+                <div class="dropdown-content">
+                    <a href="{% url 'page:waffle' %}">Waffle Icecream Sandwich</a>
+                    <a href="{% url 'page:creambars' %}">Ice Cream Bars</a>
+                    <!-- <a href="{% url 'page:minibites' %}">Mini Bites</a> -->
+                    <!-- <a href="{% url 'page:lowcal' %}">Low Cal Ice Creams</a> -->
+                </div>
+            </div>
+            <a href="{% url 'page:cakes' %}" class="tags">Cheesecakes</a>
+            <a href="{% url 'page:aboutus' %}" class="tags">About Us</a>
+        </nav>
+        <!-- heading -->
+        <div id="side_heading">
+            <h2 >cheese yogurt cheesecakes</h2>
+        </div>
+    <div id="cheesecakes">
+        <div class="cheese_div" id="cheese1">
+            <a href="">
+                <img src="https://eatnoto.com/cdn/shop/files/2swiggy_BlueberryBaby_360x.png?v=1697798951" alt="" class="che">
+            </a>
+            <h3>
+                <a href="" class="cheese_names" id="ch1">BLUEBERRY GREEK YOGURT <br> <span class="cake">CHEESECAKE</span></a>
+            </h3><br>
+            <span class="price_cheese">₹ 120.00</span><br>
+            <a href="https://www.swiggy.com" class="del">
+                <button class="cheese_swiggy">order on swiggy</button>
+            </a>
+            <a href="https://www.zomato.com" class="del">
+                <button class="cheese_zomoto">order on zomoto</button>
+            </a>
+        </div>
+        <div class="cheese_div" id="cheese2">
+            <a href="">
+                <img src="https://eatnoto.com/cdn/shop/files/4swiggy_BisCrush_533x.png?v=1697797297" alt="" class="che">
+            </a>
+            <h3>
+                <a href="" class="cheese_names" id="ch2">BISCOFF GREEK YOGURT <br> <span class="cake">CHEESECAKE</span></a>
+            </h3><br>
+            <span class="price_cheese">₹ 120.00</span><br>
+            <a href="https://www.swiggy.com" class="del">
+                <button class="cheese_swiggy">order on swiggy</button>
+            </a>
+            <a href="https://www.zomato.com" class="del">
+                <button class="cheese_zomoto">order on zomoto</button>
+            </a>
+        </div>
+        <div class="cheese_div" id="cheese3">
+        <a href="">
+            <img src="https://eatnoto.com/cdn/shop/files/swiggy1_RocherRomance_533x.png?v=1697796235" alt="" class="che">
+        </a>
+        <h3>
+                <a href="" class="cheese_names" id="ch3">NUTELLA GREEK YOGURT <br> <span class="cake">CHEESECAKE</span></a>
+        </h3><br>
+        <span class="price_cheese">₹ 120.00</span><br>
+        <a href="https://www.swiggy.com" class="del">
+            <button class="cheese_swiggy">order on swiggy</button>
+        </a>
+        <a href="https://www.zomato.com" class="del">
+            <button class="cheese_zomoto">order on zomoto</button>
+        </a>
+        </div>
+        <div class="cheese_div" id="cheese4">
+            <a href="">
+                <img src="https://eatnoto.com/cdn/shop/files/3swiggy_IloveNewYork_360x.png?v=1697798586" alt="" class="che">
+            </a>
+            <h3>
+                <a href="" class="cheese_names" id="ch4">NEWYORK GREEK YOGURT <br> <span class="cake">CHEESECAKE</span></a>
+            </h3><br>
+            <span class="price_cheese">From ₹ 120.00</span><br>
+            <a href="https://www.swiggy.com" class="del">
+                <button class="cheese_swiggy">order on swiggy</button>
+            </a>
+            <a href="https://www.zomato.com" class="del">
+                <button class="cheese_zomoto">order on zomoto</button>
+            </a>
+        </div>
+    </div>
+    <!-- footer -->
+    <div id="main_footer">
+        <footer>
+            <div id="outer_div">
+                <div id="inner_div1" class="inner">
+                    <a href="" id="noto_anchor">
+                        <img src="https://eatnoto.com/cdn/shop/files/Footer-logo_200x@2x.png?v=1640696212" alt="" id="noto_img">
+                    </a>
+                    <p id="noto_para">
+                        Let's be honest - who doesn't want to tuck <br> into sweets and ice creams everyday? All <br> too often we feel like if we've had a bite of <br> the dessert we might as well have it all - <br> because why not?!?
+                    </p>
+                </div>
+                <div id="inner_div2" class="inner">
+                    <h2 id="quick_heading">quick links:</h2>
+                    <ul>
+                        <li class="list_footer"><a href="" class="list_anchor">Ice Cream Bars</a></li>
+                        <li class="list_footer"><a href="" class="list_anchor">Fruit Popsicles</a></li>
+                        <li class="list_footer"><a href="" class="list_anchor">Low Calorie Ice <br> Cream</a></li>
+                        <li class="list_footer"><a href="" class="list_anchor">Mini Bites Ice <br> Cream</a></li>
+                        <li class="list_footer"><a href="" class="list_anchor">Ice Cream Cake</a></li>
+                        <li class="list_footer"><a href="" class="list_anchor">Greese Yogurt <br> Cheesecake</a></li>
+                        <li class="list_footer"><a href="" class="list_anchor">Vegan Mini <br> Bites</a></li>
+                        <li class="list_footer"><a href="" class="list_anchor1">Vegan Frozen <br> Desserts</a></li>
+                        <li class="list_footer"><a href="" class="list_anchor1">Syrups</a></li>
+                        <li class="list_footer"><a href="" class="list_anchor1">About Us</a></li>
+                    </ul>
+                    <ul id="icon">
+                        <li id="facebook">
+                            <a href="https://www.facebook.com">
+                                <button id="face_button">
+                                    <img src="../static/facebook.png" alt="" id="icons_img1">
+                                </button>
+                            </a>
+                        </li>
+                        <li id="instagram" >
+                            <a href="https://www.instagram.com">
+                                <img src="../static/insta.png" alt="" id="icons_img2">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="inner_div3" class="inner">
+                    <h2 id="news_heading">newsletter signup:</h2>
+                    <form action="">
+                        <div id="input_div">
+                            <div id="email_div">
+                                <input type="email" placeholder="Enter your Email Address" required id="input">
+                                <button type="submit" id="submit">Go</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="contact">
+                        <p class="order">
+                            For any order related queries email us on order@eatnoto.com
+                        </p>
+                        <br>
+                        <p class="order">
+                            For any job related queries email us on jobs@eatnoto.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

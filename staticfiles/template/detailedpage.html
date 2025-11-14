@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'detailedpage.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="product-image">
+            <img src="{{ product.image.url }}" alt="Choco Taco">
+        </div>
+        <div class="product-details">
+            <span class="new-badge">New</span>
+            <h1>{{ product.name }}</h1>
+            <div class="price">₹ {{ product.price }}.00</div>
+            <p>
+                
+                {{ product.discription }}
+               
+            </p>
+            <p><strong>100% vegetarian</strong></p>
+            <div class="buttons">
+                <a href="#" class="button swiggy">Order on Swiggy</a>
+                <a href="#" class="button zomato">Order on Zomato</a>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'detailedpage.js' %}"></script>
+    
+</body>
+</html>

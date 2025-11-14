@@ -1,0 +1,618 @@
+@font-face {
+    font-family: "NeueMachina";
+    src: url(../static/NeueMachinaRegular.otf);
+}
+@font-face {
+    font-family: "Helvetica";
+    src: url(../static/helveticalight587ebe5a59211.ttf);
+}
+@font-face {
+    font-family: "juana";
+    src: url(../static/FontspringDEMOjuanalightit.otf);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* heading */
+#heading{
+    width: 100%;
+    height: 70px;
+    /* border-bottom: 1px solid black; */
+}
+#one{
+    position: relative;
+    left: 90vh;
+}
+/* navbar */
+#navbar{
+    width: 100%;
+    height: 50px;
+    color: black;
+}
+.tags{
+    text-decoration: none;
+    color:black;
+    position: relative;
+    left: 450px;
+    top: 15px;
+    font-size: 15px;
+    font-family: Helvetica;
+    font-weight:bold;
+    margin-right: 70px;
+}
+.tags:hover{
+    color: #ad84bb;
+}
+/* poster */
+#img{
+    width: 100%;
+    height: 100%;
+}
+#temp{
+    width: 100%;
+    height: 500px;
+}
+.dropdown {
+    position: relative;
+    left: 425px;
+    top: 15px;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-family: Helvetica;
+    font-weight:bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+.dropbtn:hover {
+    background-color: #ad84bb;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu when hovering over the button */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#your_treat{
+    text-align: center;
+    font-family: Helvetica;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 45px;
+}
+#main_list{
+    width: 100%;
+    height: 320px;
+    margin-top: 40px;
+    background-image: url(https://eatnoto.com/cdn/shop/files/Website_category_banner.jpg?v=1709214401);
+}
+.img_list{
+    width: 200px;
+    height: 200px;
+    margin-top: 25px;
+}
+.list_div{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-left: 85px;
+}
+.button_bars{
+    height: 45px;
+    border-radius: 35px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    color: white;
+    margin-top: 20px;
+}
+#bar{
+    width: 200px;
+    background-color: rgb(246, 159, 159);
+    padding: 0px 25px 0px 0px;
+}
+#pop{
+    width: 150px;
+    padding: 0px 25px 0px 0px;
+    background-color: orange;
+    margin-left: 20px;
+}
+#mini{
+    width: 150px;
+    padding: 0px 25px 0px 0px;
+    background-color: rgb(245, 118, 140);
+    margin-left: 20px;
+}
+#cre{
+    width: 150px;
+    padding: 0px 25px 0px 0px;
+    background-color: rgb(190, 92, 190);
+    margin-left: 20px;
+}
+#yogurt{
+    width: 170px;
+    padding: 0px 25px 0px 0px;
+    background-color: rgb(242, 55, 117);
+    margin-left: 20px;
+}
+#arrow1{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    position: relative;
+    top: -37px;
+    left: 163px; 
+}
+#arrow2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    position: relative;
+    top: -37px;
+    left: 133px; 
+}
+#arrow3{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    position: relative;
+    top: -37px;
+    left: 133px;
+}
+#arrow4{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    position: relative;
+    top: -37px;
+    left: 133px;
+}
+#arrow5{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    position: relative;
+    top: -37px;
+    left: 154px; 
+}
+.arrow_img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/* delights */
+#summer{
+    text-align: center;
+    font-family: Helvetica;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 45px;
+}
+#delights{
+    width: 1400px;
+    height: 475px;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+.sum{
+    width: 325px;
+    height: 325px;
+    float: left;
+}
+.summer_div{
+    width: 24%;
+    float: left;
+    margin-left: 5px;
+}
+.hazelunt{
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    top: 20px;
+    left: 60px;
+    justify-content: center;
+}
+.price_summer{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    top: 40px;
+    left: 116px;
+}
+.or_swiggy{
+    width: 145px;
+    height: 38px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    margin-top: 56px;
+    margin-left: 10px;
+    background-color: #f78302;
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: 600;
+}
+.or_zomoto{
+    width: 145px;
+    height: 38px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    margin-top: 56px;
+    margin-left: 10px;
+    background-color: #db3542;
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: 600;
+}
+.del{
+    text-decoration: none;
+}
+/*fruit*/
+#fruit{
+    text-align: center;
+    font-family: Helvetica;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 45px;
+}
+#popsicles{
+    width: 1400px;
+    height: 475px;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+.fru{
+    width: 325px;
+    height: 325px;
+    float: left;
+}
+.fruit_div{
+    width: 24%;
+    float: left;
+    margin-left: 5px;
+}
+.pop_names{
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    top: 4vh;
+    left: 7.5vh;
+    justify-content: center;
+}
+.price_fruit{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    top: 40px;
+    left: 126px;
+}
+.fruit_swiggy{
+    width: 145px;
+    height: 38px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    margin-top: 56px;
+    margin-left: 10px;
+    background-color: #f78302;
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: 600;
+}
+.fruit_zomoto{
+    width: 145px;
+    height: 38px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    margin-top: 56px;
+    margin-left: 10px;
+    background-color: #db3542;
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: 600;
+}
+/*cheese*/
+#cheese{
+    text-align: center;
+    font-family: Helvetica;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 45px;
+}
+#cheesecakes{
+    width: 1400px;
+    height: 475px;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+.che{
+    width: 325px;
+    height: 325px;
+    float: left;
+}
+.cheese_div{
+    width: 24%;
+    float: left;
+    margin-left: 5px;
+}
+.cheese_names{
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    top: 4vh;
+    left: 7.5vh;
+    line-height: 3vh;
+}
+.cake{
+    position: relative;
+    left: 7vh;
+    line-height: 3vh;
+}
+.price_cheese{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    top: 40px;
+    left: 126px;
+}
+.cheese_swiggy{
+    width: 145px;
+    height: 38px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    margin-top: 56px;
+    margin-left: 10px;
+    background-color: #f78302;
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: 600;
+}
+.cheese_zomoto{
+    width: 145px;
+    height: 38px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    margin-top: 56px;
+    margin-left: 10px;
+    background-color: #db3542;
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: 600;
+}
+/* footer */
+#main_footer{
+    width: 100%;
+    height: 456px;
+    background-color: #4d52a4;
+    margin-top: 50px;
+}
+#outer_div{
+    width: 85%;
+    height: 85%;
+    position: relative;
+    top: 5vh;
+    left: 15vh;
+}
+.inner{
+    width: 33%;
+    height: 100%;
+    float: left;
+}
+#noto_img{
+    width: 27vh;
+    height: 7.5vh;
+    position: relative;
+    left: 6vh;
+    top: 0.5vh;
+}
+#noto_para{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    color: white;
+    margin-bottom: 0px;
+    letter-spacing: 0.06rem;
+    position: relative;
+    left: 6vh;
+    top: 4vh;
+}
+#quick_heading{
+    color: white;
+    font-size: 2.5vh;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    left: 8vh;
+    top: 0.7vh;
+}
+.list_anchor{
+    display: list-item;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.06rem;
+    position: relative;
+    top: 4vh;
+    left: 8vh;
+    width: fit-content;
+    margin-top: 1vh;
+}
+.list_anchor1{
+    display: list-item;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.06rem;
+    position: relative;
+    left: 32vh;
+    top: -32.8vh;
+    width: fit-content;
+    margin-top: 1vh;
+}
+.list_anchor:hover,.list_anchor1:hover{
+    text-decoration: underline;
+    color: white;
+}
+.list_footer{
+    list-style-type: none;
+}
+#icon{
+    list-style-type: none;
+    position: relative;
+    top: -6vh;
+    left: 8vh;
+    display: flex;
+}
+#icons_img1{
+    width: 20px;
+    height: 18px;
+    margin-right: 1vh;
+}
+#icons_img2{
+    width: 20px;
+    height: 20px;
+    margin-right: 2vh;
+}
+#face_button{
+    width: 20px;
+    height: 18px;
+    margin-right: 2vh;
+}
+#news_heading{
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 2px;
+    position: relative;
+    left: 10.2vh;
+    top: 0.7vh;
+}
+#input_div{
+    border: 1px solid black;
+    width: 45.6vh;
+    height: 5.5vh;
+    position: relative;
+    top: 5.3vh;
+    left: 10.2vh;
+    background-color: white;
+}
+#email_div{
+    width: 88%;
+    height: 100%;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+#submit{
+    width: 12%;
+    height: 100%;
+    background-color: #EB558F;
+    position: absolute;
+    left: 40.1vh;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 3vh;
+}
+#input{
+    width: 80%;
+    height: 100%;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border: none;
+    outline: none;
+    position: absolute;
+    left: 3.6vh;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: default;
+}
+.order{
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 12vh;
+    left: 10.2vh;
+    line-height: 24px;
+}

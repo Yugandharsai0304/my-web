@@ -1,0 +1,252 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waffle Ice Cream Sandwich</title>
+  <link rel="stylesheet" href="../static/project.css">
+</head>
+<body>
+  <!-- <script src="../static/project.js"></script> -->
+  <div id="heading">
+    <img src="https://eatnoto.com/cdn/shop/files/Website_logo_180x.png?v=1709207376" alt="" id="one">
+  </div>
+<!-- navbar -->
+    <nav id="navbar">
+        <a href="{% url 'page:home' %}" class="tags">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Ice Cream Library<span class="arrow">&#9662;</span></button>
+            <div class="dropdown-content">
+                <a href="{% url 'page:waffle' %}">Waffle Icecream Sandwich</a>
+                <a href="{% url 'page:creambars' %}">Ice Cream Bars</a>
+                <!-- <a href="{% url 'page:minibites' %}">Mini Bites</a> -->
+                <!-- <a href="{% url 'page:lowcal' %}">Low Cal Ice Creams</a> -->
+            </div>
+        </div>
+        <a href="{% url 'page:cakes' %}" class="tags">Cheesecakes</a>
+        <a href="{% url 'page:aboutus' %}" class="tags">About Us</a>
+    </nav> 
+  <header>
+    <h1>
+      {% with products.0 as first_product %}
+          {% if first_product.library == 'waffle' %}
+              Waffle Ice Cream Sandwich
+          {% elif first_product.library == 'fudgy' %}
+              ICE CREAM BARS
+          {% elif first_product.library == 'minibites' %}
+              MINI BITES - ZERO ADDED SUGAR
+          {% elif first_product.library == 'lowcal' %}
+              ICE CREAM - LOW CALORIE, HIGH PROTEIN
+          {% else %}
+          {% endif %}
+      {% endwith %}
+  </h1>
+  
+    <div class="filters">
+        <div class="filter-container">
+          <label for="availability" style="font-size: 22px;">Filters:</label>
+            <div class="filter-dropdown">
+              <button class="dropdown-toggle" id="availabilityToggle">Availability ▼</button>
+              <div class="dropdown-menu" id="availabilityMenu">
+                <div class="dropdown-header">
+                  <span>0 selected</span>
+                  <button class="reset-button">Reset</button>
+                </div>
+                <div class="dropdown-options">
+                  <label>
+                    <input type="checkbox" class="filter-option" data-option="in-stock">
+                    In stock(5)
+                  </label>
+                  <label>
+                    <input type="checkbox" class="filter-option" data-option="out-of-stock" disabled>
+                    Out of stock (0)
+                  </label>
+                </div>
+              </div>
+            </div>
+        
+            <div class="filter-dropdown">
+              <button class="dropdown-toggle" id="priceToggle">Price ▼</button>
+              <div class="dropdown-menu" id="priceMenu">
+                <div class="dropdown-header">
+                  <span>The highest price is ₹ 400.00</span>
+                  <button class="reset-button" onclick="resetPriceRange()">Reset</button>
+                </div>
+                <div class="price-range">
+                  <div class="input-wrapper">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="priceFrom" placeholder="From" min="0">
+                  </div>
+                  <div class="input-wrapper">
+                    <span class="currency-symbol">₹</span>
+                    <input type="number" id="priceTo" placeholder="To" min="0">
+                  </div>
+                </div>
+            </div>
+             
+              <!-- Add content for the Price filter here -->
+            </div>
+          </div>
+          
+          <div class="sort-container">
+              <label for="sort">Sort by:</label>
+              <select id="sort">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="newest">Newest Arrivals</option>
+              </select>
+              <div class="product-count">
+                {{products|length}} Products
+              </div>
+            </div>
+    </div>
+  </header>
+    <div id="side_heading">
+      <h2 >waffle ice cream sandwich</h2>
+    </div>
+  <main>
+    <div class="product-grid">
+      <!-- Product Card 1 -->
+       {% for p in products %}
+          <a href="{{ p.image.url }}" style="text-decoration: none; color: inherit;cursor:pointer;">
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="{{ p.image.url }}" alt="Assorted Flavour">
+                  <span class="badge">{{ p.badge }}</span>
+                </div>
+                <h5 style="margin:0">{{ p.name }}</h5>
+                <p class="price" style="margin:0">₹ {{ p.price }}.00</p>
+                <div class="rating">★★★★★ {{ p.rating }}</div>
+                <div class="actions">
+                  <button class="swiggy">Order on Swiggy</button>
+                  <button class="zomato">Order on Zomato</button>
+                </div>
+              </div>
+          </a>
+       {% endfor %}
+    
+      <!-- Repeat Product Cards -->
+      <!-- <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/RichChocolateTacoFront_750x.jpg?v=1714481965" alt="Rich Chocolate">
+          <span class="badge">New</span>
+        </div>
+        <h5>Rich Chocolate - Choco Taco [4 pieces]</h5>
+        <p class="price">₹ 200.00</p>
+        <div class="rating">★★★ 1</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div> -->
+      <!-- <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/CrunchyCaramelTacoFront_750x.jpg?v=1714482093" alt="Rich Chocolate">
+          <span class="badge">New</span>
+        </div>
+        <h5>Crunchy Caramel - Choco Taco [4 pieces]</h5>
+        <p class="price">₹ 300.00</p>
+        <div class="rating">★★★★ 1</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/ColdCoffeeTacoFront_750x.jpg?v=1714482025" alt="Rich Chocolate">
+          <span class="badge">New</span>
+        </div>
+        <h5>Cold Coffee - Choco Taco [4 pieces]</h5>
+        <p class="price">₹ 500.00</p>
+        <div class="rating">★★★★★ 1</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div> -->
+      <!-- Add more cards as needed -->
+      <!-- <div class="product-card">
+        <div class="product-image">
+          <img src="https://eatnoto.com/cdn/shop/files/SweetBerryTacoFront_750x.jpg?v=1709209672" alt="Rich Chocolate">
+          <span class="badge">New</span>
+        </div>
+        <h5>Strawberry - Choco Taco [4 pieces]</h5>
+        <p class="price">₹ 450.00</p>
+        <div class="rating">★★★★★ 1</div>
+        <div class="actions">
+          <button class="swiggy">Order on Swiggy</button>
+          <button class="zomato">Order on Zomato</button>
+        </div>
+      </div> -->
+    </div>
+  </main>
+  <!-- footer -->
+  <div id="main_footer">
+    <footer>
+        <div id="outer_div">
+            <div id="inner_div1" class="inner">
+                <a href="" id="noto_anchor">
+                    <img src="https://eatnoto.com/cdn/shop/files/Footer-logo_200x@2x.png?v=1640696212" alt="" id="noto_img">
+                </a>
+                <p id="noto_para">
+                    Let's be honest - who doesn't want to tuck <br> into sweets and ice creams everyday? All <br> too often we feel like if we've had a bite of <br> the dessert we might as well have it all - <br> because why not?!?
+                </p>
+            </div>
+            <div id="inner_div2" class="inner">
+                <h2 id="quick_heading">quick links:</h2>
+                <ul>
+                    <li class="list_footer"><a href="" class="list_anchor">Ice Cream Bars</a></li>
+                    <li class="list_footer"><a href="" class="list_anchor">Fruit Popsicles</a></li>
+                    <li class="list_footer"><a href="" class="list_anchor">Low Calorie Ice <br> Cream</a></li>
+                    <li class="list_footer"><a href="" class="list_anchor">Mini Bites Ice <br> Cream</a></li>
+                    <li class="list_footer"><a href="" class="list_anchor">Ice Cream Cake</a></li>
+                    <li class="list_footer"><a href="" class="list_anchor">Greese Yogurt <br> Cheesecake</a></li>
+                    <li class="list_footer"><a href="" class="list_anchor">Vegan Mini <br> Bites</a></li>
+                    <li class="list_footer"><a href="" class="list_anchor1">Vegan Frozen <br> Desserts</a></li>
+                    <li class="list_footer"><a href="" class="list_anchor1">Syrups</a></li>
+                    <li class="list_footer"><a href="" class="list_anchor1">About Us</a></li>
+                </ul>
+                <ul id="icon">
+                    <li id="facebook">
+                        <a href="https://www.facebook.com">
+                            <button id="face_button">
+                                <img src="../static/facebook.png" alt="" id="icons_img1">
+                            </button>
+                        </a>
+                    </li>
+                    <li id="instagram" >
+                        <a href="https://www.instagram.com">
+                            <img src="../static/insta.png" alt="" id="icons_img2">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="inner_div3" class="inner">
+                <h2 id="news_heading">newsletter signup:</h2>
+                <form action="">
+                    <div id="input_div">
+                        <div id="email_div">
+                            <input type="email" placeholder="Enter your Email Address" required id="input">
+                            <button type="submit" id="submit">Go</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="contact">
+                    <p class="order">
+                        For any order related queries email us on order@eatnoto.com
+                    </p>
+                    <br>
+                    <p class="order">
+                        For any job related queries email us on jobs@eatnoto.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="../static/project.js"></script>
+</body>
+</html>
